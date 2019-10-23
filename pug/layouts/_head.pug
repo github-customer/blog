@@ -11,5 +11,5 @@ nav#ftco-navbar.navbar.navbar-expand-lg.navbar-dark.bg-dark.ftco-navbar-light
       ul.navbar-nav.ml-auto
         li.nav-item.active
           a.nav-link(href= link('')) Home
-        li.nav-item
-          a.nav-link(href= link('/sign-up')) Sign-up
+        include _nav
+        +nav()

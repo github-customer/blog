@@ -1,0 +1,9 @@
+mixin nav()
+  if isGuest
+    li.nav-item
+      a.nav-link(href= link('/sign-up')) Sign up
+    li.nav-item
+      a.nav-link(href= link('/log-in')) Log in
+  else
+    li.nav-item
+      a.nav-link(href= link('/log-out')) Log out
