@@ -1,4 +1,4 @@
-const view = 'index';
+const view = 'single';
 
 module.exports = {
   '': {
