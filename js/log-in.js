@@ -1,1 +1,1 @@
-require('./endpoints/init')(document, require('./logic/site/log-in'));
+require('./logic/endpoints')(document, require('./logic/site/log-in'));

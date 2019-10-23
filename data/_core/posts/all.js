@@ -1,4 +1,4 @@
-const {posts} = require('../../../js/data/faker');
+const {posts} = require('../../_generators/faker');
 
 const postCount = 9;
 

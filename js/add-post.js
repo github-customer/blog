@@ -1,1 +1,1 @@
-require('./endpoints/init')(document, require('./logic/add-post'));
+require('./logic/endpoints')(document, require('./logic/add-post'));

@@ -19,7 +19,7 @@ const iterate = (count, total, posts) => {
   const commentsCount = Math.ceil(Math.random() * 10);
   posts.push({
     id: postID,
-    url: link(`/post/${postID}`),
+    url: link(`/posts/${postID}`),
     name: name(),
     desc: desc(),
     photo: asset(`/images/blog-${photoNum}.jpg`),
