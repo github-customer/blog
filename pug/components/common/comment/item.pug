@@ -10,3 +10,7 @@ mixin comment(comment)
       .meta= comment.postedAt
       p
         = comment.comment
+
+      if comment.isRecent
+        p
+          span.reply Your recent comment
