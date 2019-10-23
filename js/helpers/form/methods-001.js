@@ -8,5 +8,5 @@ const iterate = (errors) => {
 };
 
 module.exports = {
-  render: errors => iterate(errors),
+  render: (errors) => iterate(errors),
 };

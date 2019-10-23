@@ -11,15 +11,15 @@ const iterate = (count, faker, comments) => {
   return iterate(--count, faker, comments);
 };
 
-module.exports = faker => ({
+module.exports = (faker) => ({
   name: () => faker.lorem.words(),
   desc: () => faker.lorem.sentences(),
-  body: image => `<p>${faker.lorem.paragraph()}</p>
+  body: (image) => `<p>${faker.lorem.paragraph()}</p>
     <p><img src="${image}" class="img-fluid"></p>
     <p>${faker.lorem.paragraph()}</p>`,
   date: () => faker.date.recent(),
   postedAt: () => postedAt(faker.date.recent()),
   author: () => author(faker),
-  comments: count => iterate(count, faker, []),
+  comments: (count) => iterate(count, faker, []),
   comment: () => iterate(1, faker, [])[0],
 });

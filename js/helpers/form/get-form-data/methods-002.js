@@ -1,5 +1,5 @@
 module.exports = {
-  exclude: control => !control.hasAttribute('id'),
+  exclude: (control) => !control.hasAttribute('id'),
   checkbox: (control, data) => {
     data[control.id] = control.checked;
     return data;

@@ -33,7 +33,7 @@ const iterate = (count, total, posts) => {
 };
 
 module.exports = {
-  posts: total => iterate(1, total, []),
-  comments: count => comments(count),
+  posts: (total) => iterate(1, total, []),
+  comments: (count) => comments(count),
   comment: () => comment(),
 };

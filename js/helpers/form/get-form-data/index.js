@@ -11,7 +11,7 @@ const iterate = (controls, data) => {
 
 const $ = window.jQuery;
 
-module.exports = formID => iterate(
+module.exports = (formID) => iterate(
   $(`#${formID}`).find('input, select, textarea').get(),
   {}
 );

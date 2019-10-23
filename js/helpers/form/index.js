@@ -3,7 +3,7 @@ const getFormData = require('./get-form-data');
 
 const $ = window.jQuery;
 
-module.exports = formID => ({
+module.exports = (formID) => ({
   getFormData: () => getFormData(formID),
   hideForm: () => $(`#${formID}`).modal('hide'),
   removeErrors: () => {
