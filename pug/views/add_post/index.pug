@@ -1,5 +1,8 @@
 extends ../../layouts/default
 
+block append scripts
+  script(src= asset('/js/add-post.js'))
+
 block content
   section.hero-wrap.hero-wrap-2(style=`background-image: url("${asset('/images/author.jpg')}");`)
     .overlay
@@ -11,5 +14,5 @@ block content
     .container
       .row
         .col-lg-8.order-lg-last.ftco-animate
-          h2.mb-3 What is next?
-          a.btn.btn-primary.btn-lg(href= link('/add-post')) Add post
+          h2.mb-3 Adding a post
+          include _form
