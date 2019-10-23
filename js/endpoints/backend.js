@@ -7,4 +7,5 @@ module.exports = host => ajaxObject(host, apiVersion, {
   login: ['post', 'login'],
   logout: ['post', 'logout'],
   addPost: ['post', 'create-post'],
+  addComment: ['post', 'create-comment'],
 });

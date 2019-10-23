@@ -15,24 +15,10 @@ include ../../components/common/comment/item
 
   .pt-5.mt-5
     h3.mb-5 #{post.comments.length} Comments
-    ul.comment-list
+    ul#comments.comment-list
       each comment in post.comments
         +comment(comment)
 
     .comment-form-wrap.pt-5
       h3.mb-5 Leave a comment
-      form.p-5.bg-light(action='#')
-        .form-group
-          label(for='name') Name *
-          input#name.form-control(type='text')
-        .form-group
-          label(for='email') Email *
-          input#email.form-control(type='email')
-        .form-group
-          label(for='website') Website
-          input#website.form-control(type='url')
-        .form-group
-          label(for='message') Message
-          textarea#message.form-control(name='' cols='30' rows='10')
-        .form-group
-          input.btn.py-3.px-4.btn-primary(type='submit' value='Post Comment')
+      include _form

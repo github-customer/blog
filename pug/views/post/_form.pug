@@ -1,0 +1,25 @@
+form#add-comment-form.p-5.bg-light(action='#')
+  .form-group
+    label(for='add-comment-form-name') Name *
+    input#add-comment-form-name.form-control(
+      type='text'
+      placeholder='Your name'
+    )
+    small.form-text.text-danger.text-center
+  .form-group
+    label(for='add-comment-form-email') Email *
+    input#add-comment-form-email.form-control(
+      type='email'
+      placeholder='Your email'
+    )
+    small.form-text.text-danger.text-center
+  .form-group
+    label(for='add-comment-form-message') Message
+    textarea#add-comment-form-message.form-control(
+      placeholder='Your message'
+      cols='30'
+      rows='10'
+    )
+    small.form-text.text-danger.text-center
+  .form-group
+    button#add-comment-form-submit.btn.py-3.px-4.btn-primary(type='submit') Post Comment
