@@ -1,4 +1,5 @@
 extends ../../layouts/default
+include ./_user
 
 block content
   section.hero-wrap.hero-wrap-2(style=`background-image: url("${asset('/images/author.jpg')}");`)
@@ -10,6 +11,5 @@ block content
   section.ftco-section
     .container
       .row
-        .col-lg-8.order-lg-last.ftco-animate
-          h2.mb-3 What is next?
-          a.btn.btn-primary.btn-lg(href= link('/add-post')) Add post
+        #user-dashboard.col-lg-8.order-lg-last.ftco-animate
+          +user()

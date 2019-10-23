@@ -1,5 +1,8 @@
-const {setToken} = require('@greenminds/nf-app-logic').auth;
+const {setAuth, setToken} = require('@greenminds/nf-app-logic').auth;
 
 module.exports = {
-  save: (token) => setToken(token),
+  save: (token, user) => {
+    setAuth(user);
+    setToken(token);
+  },
 };

@@ -3,9 +3,12 @@ const isInvalid = (email) => {
   return !reg.test(email);
 };
 
+const emails = ['a@a.a', 'b@b.b', 'c@c.c', 'd@d.d'];
+
 module.exports = (data) => {
   const {link, formData} = data;
-  if (isInvalid(formData['login-form-email'])) {
+  const email = formData['login-form-email'];
+  if (isInvalid(email)) {
     return {
       method: 'POST',
       url: `${link}/api/proto/v1/validate/error/login`,
@@ -17,8 +20,14 @@ module.exports = (data) => {
       url: `${link}/api/proto/v1/validate/error/login`,
     };
   }
+  if (emails.includes(email)) {
+    return {
+      method: 'POST',
+      url: `${link}/api/proto/v1/login/${emails.indexOf(email)}`,
+    };
+  }
   return {
     method: 'POST',
-    url: `${link}/api/proto/v1/login/ok`,
+    url: `${link}/api/proto/v1/login/none`,
   };
 };

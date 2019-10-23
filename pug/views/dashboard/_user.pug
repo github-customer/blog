@@ -1,0 +1,8 @@
+mixin user
+  if (user)
+    h2.mb-3= `Hello ${user.name}`
+    p= `You have ${user.socCap} social capital reached by ${user.posts} posts.`
+    h2 What's next?
+    a.btn.btn-primary.btn-lg(href= link('/add-post'))= `Go on and add ${user.posts + 1}th post`
+  else
+    h2.mb-3 Trespassing prohibited
