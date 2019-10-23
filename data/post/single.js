@@ -1,4 +1,4 @@
-const view = 'single';
+const view = 'post/single';
 
 module.exports = {
   '': {
