@@ -1,0 +1,14 @@
+mixin featured(post)
+  .slider-item
+    .container
+      .row.d-flex.slider-text.justify-content-center.align-items-center(data-scrollax-parent='true')
+        .img(style=`background-image: url(${post.photo});`)
+        .text.d-flex.align-items-center.ftco-animate
+          .text-2.pb-lg-5.mb-lg-4.px-4.px-md-5
+            h3.subheading.mb-3 Featured Posts
+            h1.mb-5= post.name
+            p.mb-md-5= post.desc
+            p
+              a.btn.btn-black.px-3.px-md-4.py-3(href= post.url)
+                | Read More
+                span.icon-arrow_forward.ml-lg-4

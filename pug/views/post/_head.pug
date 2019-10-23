@@ -1,14 +1,14 @@
-section.hero-wrap.hero-wrap-2(style=`background-image: url(${asset('/images/bg_4.jpg')});`)
+section.hero-wrap.hero-wrap-2(style=`background-image: url(${post.photo});`)
   .overlay
   .container
     .row.no-gutters.slider-text.align-items-end.justify-content-center
       .col-md-9.ftco-animate.pb-5.text-center
-        h1.mb-3.bread Article Single
+        h1.mb-3.bread= post.name
         p.breadcrumbs
           span.mr-2
-            a(href='index.html')
+            a(href= link(''))
               | Home 
               i.ion-ios-arrow-forward
           span
-            | Article Single
+            = post.name
             i.ion-ios-arrow-forward

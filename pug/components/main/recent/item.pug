@@ -1,0 +1,15 @@
+mixin recent(post)
+  .col-md-6.ftco-animate
+    .blog-entry
+      a.img.d-flex.align-items-end(href='single.html' style=`background-image: url(${post.photo});`)
+        .overlay
+      .text.pt-3
+        p.meta.d-flex
+          span.pr-3 Dessert
+          span.ml-auto.pl-3= post.publishedAt
+        h3
+          a(href= post.url)= post.name
+        p.mb-0
+          a.btn-custom(href= post.url)
+            | Read More
+            span.icon-arrow_forward.ml-4

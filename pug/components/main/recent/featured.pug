@@ -1,0 +1,12 @@
+mixin featured(post)
+  .blog-entry
+    .img.img-big.d-flex.align-items-end(style=`background-image: url(${post.photo});`)
+      .overlay
+      .text
+        span.subheading Food
+        h3
+          a(href= post.url)= post.name
+        p.mb-0
+          a.btn-custom(href= post.url)
+            | Read More
+            span.icon-arrow_forward.ml-4

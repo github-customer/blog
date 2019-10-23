@@ -1,3 +1,6 @@
+include ../../components/main/recent/featured
+include ../../components/main/recent/item
+
 section.ftco-section
   .container
     .row
@@ -6,72 +9,8 @@ section.ftco-section
           span Recent Stories
     .row
       .col-md-6.order-md-last.col-lg-6.ftco-animate
-        .blog-entry
-          .img.img-big.d-flex.align-items-end(style=`background-image: url(${asset('/images/image_2.jpg')});`)
-            .overlay
-            .text
-              span.subheading Food
-              h3
-                a(href='single.html') Tasty &amp; Delicious Foods
-              p.mb-0
-                a.btn-custom(href='single.html')
-                  | Read More 
-                  span.icon-arrow_forward.ml-4
+        +featured(recent)
       .col-md-6
         .row
-          .col-md-6.ftco-animate
-            .blog-entry
-              a.img.d-flex.align-items-end(href='single.html' style=`background-image: url(${asset('/images/image_1.jpg')});`)
-                .overlay
-              .text.pt-3
-                p.meta.d-flex
-                  span.pr-3 Dessert
-                  span.ml-auto.pl-3 March 01, 2018
-                h3
-                  a(href='single.html') Tasty &amp; Delicious Foods
-                p.mb-0
-                  a.btn-custom(href='single.html')
-                    | Read More 
-                    span.icon-arrow_forward.ml-4
-          .col-md-6.ftco-animate
-            .blog-entry
-              a.img.d-flex.align-items-end(href='single.html' style=`background-image: url(${asset('/images/image_3.jpg')});`)
-                .overlay
-              .text.pt-3
-                p.meta.d-flex
-                  span.pr-3 Dessert
-                  span.ml-auto.pl-3 March 01, 2018
-                h3
-                  a(href='single.html') Tasty &amp; Delicious Foods from Scotland
-                p.mb-0
-                  a.btn-custom(href='single.html')
-                    | Read More 
-                    span.icon-arrow_forward.ml-4
-          .col-md-6.ftco-animate
-            .blog-entry
-              a.img.d-flex.align-items-end(href='single.html' style=`background-image: url(${asset('/images/image_4.jpg')});`)
-                .overlay
-              .text.pt-3
-                p.meta.d-flex
-                  span.pr-3 Dessert
-                  span.ml-auto.pl-3 March 01, 2018
-                h3
-                  a(href='single.html') Tasty &amp; Delicious Foods
-                p.mb-0
-                  a.btn-custom(href='single.html')
-                    | Read More 
-                    span.icon-arrow_forward.ml-4
-          .col-md-6.ftco-animate
-            .blog-entry
-              a.img.d-flex.align-items-end(href='single.html' style=`background-image: url(${asset('/images/image_5.jpg')});`)
-                .overlay
-              .text.pt-3
-                p.meta.d-flex
-                  span.pr-3 Dessert
-                  span.ml-auto.pl-3 March 01, 2018
-                h3
-                  a(href='single.html') Tasty &amp; Delicious Foods
-                p.mb-0
-                  a.btn-custom(href='single.html')
-                    | Read More 
-                    span.icon-arrow_forward.ml-4
+          each post in recents
+            +recent(post)
