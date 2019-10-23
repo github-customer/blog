@@ -3,18 +3,17 @@ footer.ftco-footer.ftco-footer-2.ftco-section
     .row.mb-5
       .col-md
         .ftco-footer-widget.mb-4
-          h2.ftco-heading-2 Stories
-          p
-            | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          h2.ftco-heading-2= blogName
+          p= blogDesc
           ul.ftco-footer-social.list-unstyled.float-md-left.float-lft.mt-5
             li.ftco-animate
-              a(href='#')
+              a(href=socials.twitter)
                 span.icon-twitter
             li.ftco-animate
-              a(href='#')
+              a(href=socials.facebook)
                 span.icon-facebook
             li.ftco-animate
-              a(href='#')
+              a(href=socials.instagram)
                 span.icon-instagram
       .col-md
         .ftco-footer-widget.mb-4.ml-md-5
@@ -51,21 +50,20 @@ footer.ftco-footer.ftco-footer-2.ftco-section
             ul
               li
                 span.icon.icon-map-marker
-                span.text 203 Fake St. Mountain View, San Francisco, California, USA
+                span.text= contacts.address
               li
                 a(href='#')
                   span.icon.icon-phone
-                  span.text +2 392 3929 210
+                  span.text= contacts.phone
               li
                 a(href='#')
                   span.icon.icon-envelope
-                  span.text info@yourdomain.com
+                  span.text= contacts.email
     .row
       .col-md-12.text-center
         p
           | Copyright &copy;
-          script.
-            document.write(new Date().getFullYear());
+          = currentYear
           |  All rights reserved | This template is made with 
           i.icon-heart.color-danger(aria-hidden='true')
           |  by 
