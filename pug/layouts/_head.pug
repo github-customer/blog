@@ -1,3 +1,5 @@
+include ./_nav
+
 nav#ftco-navbar.navbar.navbar-expand-lg.navbar-dark.bg-dark.ftco-navbar-light
   .container
     a.navbar-brand(href= link(''))
@@ -8,8 +10,5 @@ nav#ftco-navbar.navbar.navbar-expand-lg.navbar-dark.bg-dark.ftco-navbar-light
       span.oi.oi-menu
       |  Menu
     #ftco-nav.collapse.navbar-collapse
-      ul.navbar-nav.ml-auto
-        li.nav-item.active
-          a.nav-link(href= link('')) Home
-        include _nav
+      ul#auth-nav.navbar-nav.ml-auto
         +nav()

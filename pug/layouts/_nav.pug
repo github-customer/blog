@@ -1,4 +1,6 @@
 mixin nav()
+  li.nav-item.active
+    a.nav-link(href= link('')) Home
   if isGuest
     li.nav-item
       a.nav-link(href= link('/sign-up')) Sign up

@@ -1,4 +1,3 @@
-const isGuest = false;
 const blogName = 'Culinary stories';
 const blogDesc = 'Tasteful in life: culinary stories, tales and novels';
 const socials = {
@@ -14,7 +13,6 @@ const contacts = {
 const currentYear = (new Date()).getFullYear();
 
 module.exports = {
-  isGuest,
   blogName,
   blogDesc,
   socials,

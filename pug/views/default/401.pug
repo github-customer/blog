@@ -1,0 +1,18 @@
+extends ../../layouts/default
+
+block append scripts
+  script(src= asset('/js/log-in.js'))
+
+block content
+  section.ftco-section.ftco-no-pb.contact-section
+    .container
+      .row.block-9
+        .col-md-6.d-flex
+          .row
+            h1 401 Unauthorized
+            p 
+              | This page requires you to be authorized.
+              br
+              | Please login to proceed to the page contents.
+        .col-md-6.order-md-last.d-flex
+          include ../site/log-in/_form

@@ -1,5 +1,5 @@
 const {prepare} = require('./methods-003');
-const render = require('../../../../pug/components/common/comment/_item.pug');
+const render = require('../../../pug/comment_item.pug');
 
 module.exports = {
   render: (data) => {

@@ -1,2 +1,16 @@
-include ./item
-+comment(comment)
+mixin comment(comment)
+  li.comment
+    .vcard.bio
+      img(
+        src= comment.author.avatar
+        alt= comment.author.name
+      )
+    .comment-body
+      h3= comment.author.name
+      .meta= comment.postedAt
+      p
+        = comment.comment
+
+      if comment.isRecent
+        p
+          span.reply Your recent comment

@@ -1,6 +1,7 @@
-const title = 'Dashboard';
-
 module.exports = {
-  '': {view: 'dashboard/index'},
-  title,
+  '': {
+    view: 'dashboard/index',
+    auth: 'notify',
+  },
+  title: 'Dashboard',
 };

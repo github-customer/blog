@@ -1,6 +1,7 @@
-const title = 'Adding new post';
-
 module.exports = {
-  '': {view: 'add_post/index'},
-  title,
+  '': {
+    view: 'add_post/index',
+    auth: 'notify',
+  },
+  title: 'Adding new post',
 };
