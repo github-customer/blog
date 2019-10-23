@@ -1,6 +1,6 @@
 nav#ftco-navbar.navbar.navbar-expand-lg.navbar-dark.bg-dark.ftco-navbar-light
   .container
-    a.navbar-brand(href='index.html')
+    a.navbar-brand(href= link(''))
       = blogName
       span .
     button.navbar-toggler(type='button' data-toggle='collapse' data-target='#ftco-nav' aria-controls='ftco-nav' aria-expanded='false' aria-label='Toggle navigation')
@@ -10,12 +10,6 @@ nav#ftco-navbar.navbar.navbar-expand-lg.navbar-dark.bg-dark.ftco-navbar-light
     #ftco-nav.collapse.navbar-collapse
       ul.navbar-nav.ml-auto
         li.nav-item.active
-          a.nav-link(href='index.html') Home
+          a.nav-link(href= link('')) Home
         li.nav-item
-          a.nav-link(href='about.html') About
-        li.nav-item
-          a.nav-link(href='foods.html') Foods
-        li.nav-item
-          a.nav-link(href='lifestyle.html') Lifestyle
-        li.nav-item
-          a.nav-link(href='contact.html') Contact
+          a.nav-link(href= link('/sign-up')) Sign-up
