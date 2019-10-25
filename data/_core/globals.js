@@ -1,4 +1,4 @@
-const blogName = 'Culinary stories';
+const blogName = 'NOT Culinary stories';
 const blogDesc = 'Tasteful in life: culinary stories, tales and novels';
 const socials = {
   twitter: 'https://twitter.com',
